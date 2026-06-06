@@ -1,0 +1,230 @@
+/* h1{
+    color: red;
+} */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+
+h1{
+    background-color: rgb(10, 10, 40);
+    color: blanchedalmond;
+    height: 5.5rem;
+    line-height: 5.5rem;
+    font-size: 2.8rem;
+}
+
+.choice{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice:hover{
+    cursor: pointer;
+    background-color: rgb(1, 1, 21);
+}
+
+img{
+    height: 185px;
+    width: 185px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    gap: 5rem;
+}
+
+#user-score,#comp-score{
+    font-size: 4.5rem;
+}
+
+.msg-container{
+    text-align: center;
+}
+
+#msg{
+    background-color: rgb(20, 20, 57);
+    color: bisque;
+    font-size: 1.8rem;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 1.5rem;
+}
+
+.reset-container{
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+#reset-btn{
+    background-color: rgb(20, 20, 57);
+    color: bisque;
+    font-size: 1.3rem !important;
+    border: none;
+    padding: 0.7rem 2.2rem !important;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+#reset-btn:hover{
+    background-color: rgb(35, 35, 90);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#reset-btn:active{
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* ── How to Play Widget ── */
+.help-wrapper {
+    position: fixed;
+    top: 5.8rem;
+    left: 1rem;
+    z-index: 100;
+    text-align: left;
+}
+
+#help-btn {
+    background: transparent !important;
+    border: none;
+    cursor: pointer;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 !important;
+    box-shadow: none !important;
+    font-family: inherit;
+    transition: opacity 0.2s ease;
+}
+
+#help-btn:hover {
+    opacity: 0.75;
+    transform: none;
+    box-shadow: none !important;
+}
+
+.help-icon {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(20, 20, 57);
+    color: bisque;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.help-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(20, 20, 57);
+    letter-spacing: 0.01em;
+}
+
+#rules-popup {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    left: 0;
+    background-color: rgb(20, 20, 57);
+    border-radius: 0.5rem;
+    padding: 1.1rem 1.3rem 0.9rem 1.3rem;
+    box-shadow: 3px 4px 14px rgba(0,0,0,0.25);
+    min-width: 210px;
+    text-align: left;
+    border: 1px solid rgba(255,255,255,0.1);
+    animation: fadeInDown 0.2s ease;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+#rules-popup ul {
+    list-style: disc;
+    padding-left: 1.1rem;
+    margin-top: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+#rules-popup ul li {
+    font-size: 0.9rem;
+    color: bisque;
+    font-weight: 600;
+    text-align: left;
+}
+
+.rules-tip {
+    margin-top: 0.7rem;
+    font-size: 0.76rem;
+    color: #aaa;
+    font-style: italic;
+    text-align: left;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 0.5rem;
+}
+
+#close-btn {
+    position: absolute !important;
+    top: 0.3rem;
+    right: 0.4rem;
+    background: #e05252 !important;
+    border: none;
+    font-size: 0.7rem !important;
+    cursor: pointer;
+    color: #fff;
+    padding: 0.15rem 0.38rem !important;
+    line-height: 1;
+    border-radius: 3px;
+    transition: background 0.2s ease;
+    box-shadow: none !important;
+}
+
+#close-btn:hover {
+    background: #c0392b !important;
+    color: #fff;
+}
+

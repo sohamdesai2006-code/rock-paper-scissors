@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+    <link rel="stylesheet" href="style10.css">
+</head>
+<body>
+    <!-- How to Play Help Button & Popup -->
+    <div class="help-wrapper">
+        <button id="help-btn">
+            <span class="help-icon">?</span>
+            <span class="help-label">How to Play</span>
+        </button>
+        <div id="rules-popup">
+            <button id="close-btn">✕</button>
+            <ul>
+                <li>🪨 Rock beats Scissor</li>
+                <li>📄 Paper beats Rock</li>
+                <li>✂️ Scissor beats Paper</li>
+            </ul>
+            <p class="rules-tip">Click any icon to make your move!</p>
+        </div>
+    </div>
+
+    <h1>Rock Paper Scissor</h1>
+
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="rock.png">
+        </div>
+        <div class="choice" id="paper">
+            <img src="paper.png">
+        </div>
+        <div class="choice" id="scissor">
+            <img src="scissor.png">
+        </div>
+    </div>
+
+    <div class="score-board">
+        <div class="score">
+            <p id="user-score">0</p>
+            <p>You</p>
+        </div>
+        <div class="score">
+            <p id="comp-score">0</p>
+            <p>Computer</p>
+        </div>
+    </div>
+
+    <div class="msg-container">
+        <p id="msg">Play Your Move</p>
+    </div>
+
+    <div class="reset-container">
+        <button id="reset-btn" onclick="resetGame()">Restart Game</button>
+    </div>
+    <script src="RPS.js"></script>
+</body>
+</html>
