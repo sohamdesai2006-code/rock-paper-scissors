@@ -33,9 +33,9 @@ A fun and interactive **Rock, Paper, Scissors** game built with pure **HTML**, *
 ## 📁 Project Structure
 
 ```
-js-lec10/
+RPS game/
 ├── index.html       # Main HTML page
-├── style10.css      # All styles and layout
+├── style.css        # All styles and layout
 ├── RPS.js           # Game logic and interactivity
 ├── rock.png         # Rock choice image
 ├── paper.png        # Paper choice image
