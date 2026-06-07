@@ -11,29 +11,46 @@
 }
 
 body{
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 1.5rem;
+    justify-content: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    gap: clamp(1.2rem, 5vh, 4rem);
+    padding: 1rem 0;
 }
 
 h1{
     background-color: rgb(10, 10, 40);
     color: blanchedalmond;
-    height: 5.5rem;
-    line-height: 5.5rem;
-    font-size: 2.8rem;
+    height: auto;
+    padding: 1rem 0;
+    font-size: clamp(1.6rem, 6vw, 2.8rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .choice{
-    height: 200px;
-    width: 200px;
+    width: 25%;
+    aspect-ratio: 1 / 1;
+    max-width: 200px;
+    min-width: 80px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.2s ease;
 }
 
 .choice:hover{
@@ -42,8 +59,8 @@ h1{
 }
 
 img{
-    height: 185px;
-    width: 185px;
+    width: 90%;
+    height: 90%;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -52,19 +69,21 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: clamp(0.5rem, 5%, 2rem);
+    padding: 0 0.5rem;
+    width: 100%;
 }
 
 .score-board{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.8rem;
-    gap: 5rem;
+    font-size: clamp(1.1rem, 3.5vw, 1.8rem);
+    gap: clamp(2rem, 8vw, 5rem);
 }
 
 #user-score,#comp-score{
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
 }
 
 .msg-container{
@@ -74,7 +93,7 @@ img{
 #msg{
     background-color: rgb(20, 20, 57);
     color: bisque;
-    font-size: 1.8rem;
+    font-size: clamp(1.1rem, 3.5vw, 1.8rem);
     display: inline-block;
     padding: 0.8rem 2rem;
     border-radius: 1.5rem;
@@ -226,5 +245,85 @@ img{
 #close-btn:hover {
     background: #c0392b !important;
     color: #fff;
+}
+
+/* ── Media Queries for Responsiveness ── */
+
+@media (max-width: 768px) {
+    .help-wrapper {
+        top: 4.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .help-wrapper {
+        top: 4.2rem;
+        left: 0.8rem;
+    }
+
+    .help-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 0.9rem;
+    }
+
+    .help-label {
+        font-size: 0.9rem;
+    }
+
+    #rules-popup {
+        min-width: 180px;
+        padding: 0.9rem 1.1rem 0.8rem 1.1rem;
+    }
+
+    #rules-popup ul li {
+        font-size: 0.85rem;
+    }
+
+    #reset-btn {
+        font-size: 1.15rem !important;
+        padding: 0.6rem 1.8rem !important;
+    }
+
+    h1 {
+        font-size: 1.6rem !important;
+        padding: 0.8rem 0 !important;
+    }
+
+    .game-container {
+        gap: 1.5rem !important;
+        padding: 0.5rem 0 !important;
+    }
+
+    .choices {
+        gap: 1.5vw !important;
+        padding: 0 1.5vw !important;
+    }
+
+    .choice {
+        width: 30vw !important;
+        height: 30vw !important;
+        min-width: 0 !important;
+        max-width: none !important;
+    }
+
+    .choice img {
+        width: 90% !important;
+        height: 90% !important;
+    }
+
+    .score-board {
+        font-size: 1.1rem !important;
+        gap: 2rem !important;
+    }
+
+    #user-score, #comp-score {
+        font-size: 2.2rem !important;
+    }
+
+    #msg {
+        font-size: 1.1rem !important;
+        padding: 0.6rem 1.5rem !important;
+    }
 }
 
