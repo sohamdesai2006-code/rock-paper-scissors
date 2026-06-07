@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor Game</title>
-    <link rel="stylesheet" href="style.css?v=22">
+    <link rel="stylesheet" href="style.css?v=25">
 </head>
 
 <body>
@@ -29,6 +29,15 @@
     <h1>Rock Paper Scissor</h1>
 
     <div class="game-container">
+        <div class="mode-selector">
+            <span class="mode-label">Game Mode</span>
+            <div class="mode-options">
+                <button class="mode-btn active" data-mode="infinite">Endless</button>
+                <button class="mode-btn" data-mode="3">Best of 3</button>
+                <button class="mode-btn" data-mode="5">Best of 5</button>
+            </div>
+        </div>
+
         <div class="choices">
             <div class="choice" id="rock">
                 <img src="rock.png">
@@ -60,6 +69,15 @@
             <button id="reset-btn" onclick="resetGame()">Restart Game</button>
         </div>
     </div>
+
+    <div id="game-over-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 id="modal-title"><span id="modal-icon">🏆</span> <span id="modal-text" class="gradient-text-win">You Win!</span></h2>
+            <p id="modal-details">You beat the Computer 2 - 0 in the Best of 3 series!</p>
+            <button id="modal-reset-btn" onclick="closeModal()">Play Again</button>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="RPS.js"></script>
 </body>
