@@ -1,23 +1,22 @@
 # 🪨📄✂️ Rock Paper Scissors
 
-A fun and interactive **Rock, Paper, Scissors** game built with pure **HTML**, **CSS**, and **JavaScript** — playable right in your browser with no dependencies or setup required.
+A fun, responsive, and highly interactive **Rock, Paper, Scissors** game built with pure **HTML**, **CSS**, and **JavaScript** — playable right in your browser with zero setup.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20on%20Vercel-black?style=for-the-badge&logo=vercel)](https://rock-paper-scissors-gamma-lovat.vercel.app/)
 
 ---
 
-
 ## ✨ Features
 
-- 🤖 **Play Against the Computer** — Random computer move generation to keep gameplay unpredictable.
-- 🎨 **Premium Dark Gradient Theme** — Modern, high-end radial background gradient using deep indigo and navy-black tones.
-- 🧊 **Glassmorphism UI** — Scoreboard cards and message container designed with semi-transparent backdrops, subtle borders, and backdrop-filter blur effects.
-- 🚀 **Tactile Micro-Animations** — Spring-based hover scales, custom image rotations, and active click state animations on selection circles.
-- 💥 **Confetti & Shake Feedback** — High-fidelity outcome animations including colorful confetti bursts on wins and horizontal shake animations on losses.
-- 📊 **Glowing Score Cards** — Individual equal-sized scorecards with a gold glow for the player and a coral glow for the computer.
-- 📱 **Fully Mobile Responsive** — Dynamically scales down to `320px` width using viewport width (`vw`) units, flexible margins, and fluid typography.
-- 🔄 **Smooth Restart Button** — Fades in once a point is scored and lets you reset the game instantly.
-- 📖 **How to Play Popup** — Accessible collapsable widget in the top-left corner explaining the rules.
+- 🏆 **"Best of X" Series Modes** — Choose between **Endless**, **Best of 3** (first to 2 wins), and **Best of 5** (first to 3 wins) game sets to play standard tournament rounds.
+- 🎓 **Game Over Victory Overlay** — Full-screen glassmorphic modal displaying the final series results, score counts, and an interactive "Play Again" restart button.
+- 🤖 **Smart Computer Play** — Play against a random computer opponent with instant calculations and randomized matchups.
+- 📊 **Real-time Scorecard** — User and computer scores update dynamically in stylized glassmorphic card widgets with glowing text-shadows.
+- 🎉 **Vibrant Micro-Animations & Confetti** — Spring-bouncy hover scaling on choices, tactile shake feedback on losses, and a massive confetti celebration upon winning the series.
+- 💬 **Dynamic Msg Banners** — Glowing banners change color dynamically based on round outcomes (green for win, red for loss, yellow for draw).
+- 📐 **Height-Adaptive Layout** — Automatically fits the entire UI on a single screen without vertical scrollbars using fluid CSS clamp scales and balanced distribution on both desktop and mobile viewports.
+- 📖 **"How to Play" Collapsible Rules** — Collapsible rules panel floating in the top-left corner explaining game rules at a glance.
+- 🚫 **No Text Selection** — Custom app-like user selection controls disabled across interactive components for clean mobile responsiveness.
 
 ---
 
@@ -25,9 +24,10 @@ A fun and interactive **Rock, Paper, Scissors** game built with pure **HTML**, *
 
 | Technology | Purpose |
 |---|---|
-| **HTML5** | Page structure and game elements |
-| **CSS3** | Styling, flexbox layout, animations, hover effects |
-| **JavaScript (ES6)** | Game logic, DOM manipulation, event listeners |
+| **HTML5** | Semantic layout structure and DOM nodes |
+| **CSS3** | Premium radial gradients, glassmorphism, clamp scales, animations |
+| **JavaScript (ES6)** | Game loop logic, series calculations, event listeners |
+| **Canvas Confetti** | Celebration visual effects on wins |
 
 ---
 
@@ -36,11 +36,11 @@ A fun and interactive **Rock, Paper, Scissors** game built with pure **HTML**, *
 ```
 RPS game/
 ├── index.html       # Main HTML page
-├── style.css        # All styles and layout
-├── RPS.js           # Game logic and interactivity
-├── rock.png         # Rock choice image
-├── paper.png        # Paper choice image
-├── scissor.png      # Scissor choice image
+├── style.css        # Premium styling and responsiveness rules
+├── RPS.js           # Game loops and interactivity controllers
+├── rock.png         # Rock choice hand image
+├── paper.png        # Paper choice hand image
+├── scissor.png      # Scissor choice hand image
 └── README.md        # Project documentation
 ```
 
@@ -56,17 +56,18 @@ RPS game/
    ```
 4. Open your browser and visit **[http://localhost:8080](http://localhost:8080)**
 
-> You can also simply open `index.html` directly in any modern browser — no server required for basic play.
+> Note: You can also simply open `index.html` directly in any modern web browser to run the game locally.
 
 ---
 
 ## 🎮 How to Play
 
-1. Click on **Rock**, **Paper**, or **Scissor** to make your move
-2. The computer instantly picks its move at random
-3. The result banner tells you who won the round
-4. Scores update automatically — first to rack up the most points wins!
-5. Click **Restart Game** at any time to reset back to 0 – 0
+1. Select a **Game Mode**: **Endless**, **Best of 3**, or **Best of 5** at the top.
+2. Click on **Rock**, **Paper**, or **Scissor** icons to play your move.
+3. The computer instantly plays its random response move.
+4. The result card displays outcomes (glowing green/red/yellow) with interactive confetti or shake animations.
+5. Once a player reaches the target score (2 for Best of 3, 3 for Best of 5), a gorgeous victory/defeat modal overlays the screen.
+6. Click **Play Again** inside the modal or **Restart Game** at the bottom at any time to clear scores back to 0 – 0.
 
 ---
 
