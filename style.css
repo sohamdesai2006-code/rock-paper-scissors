@@ -189,9 +189,26 @@ img {
 }
 
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-6px); }
-    20%, 40%, 60%, 80% { transform: translateX(6px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-6px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(6px);
+    }
 }
 
 .reset-container {
@@ -284,16 +301,23 @@ img {
     background-color: rgb(20, 20, 57);
     border-radius: 0.5rem;
     padding: 1.1rem 1.3rem 0.9rem 1.3rem;
-    box-shadow: 3px 4px 14px rgba(0,0,0,0.25);
+    box-shadow: 3px 4px 14px rgba(0, 0, 0, 0.25);
     min-width: 210px;
     text-align: left;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     animation: fadeInDown 0.2s ease;
 }
 
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-6px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #rules-popup ul {
@@ -318,7 +342,7 @@ img {
     color: #aaa;
     font-style: italic;
     text-align: left;
-    border-top: 1px solid rgba(255,255,255,0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 0.5rem;
 }
 
@@ -420,7 +444,8 @@ img {
         border-radius: 1rem !important;
     }
 
-    #user-score, #comp-score {
+    #user-score,
+    #comp-score {
         font-size: 2.2rem !important;
     }
 
@@ -429,4 +454,3 @@ img {
         padding: 0.6rem 1.5rem !important;
     }
 }
-
