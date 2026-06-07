@@ -25,25 +25,38 @@ const genComputerChoice = () => {
  };
 
 const drawGame = () => {
-    //console.log("Game is Draw");
     msg.innerText = "Game Draw";
-    msg.style.backgroundColor="rgb(20, 20, 57)";
+    msg.className = ""; // clear old outcome/animation classes
+    msg.classList.add("msg-draw");
 };
 
 const showWinner = (userWin,userChoice,compChoice) =>{
+    msg.className = ""; // clear old outcome/animation classes
     if(userWin){
         userScore++;
-      //  console.log("User Win");
         userScorePara.innerText=userScore;
         msg.innerText = `You Win! Your ${userChoice} beats ${compChoice}`;
-        msg.style.backgroundColor="green";
+        msg.classList.add("msg-win");
+        
+        // Confetti Celebration
+        if (typeof confetti === "function") {
+            confetti({
+                particleCount: 80,
+                spread: 60,
+                origin: { y: 0.7 }
+            });
+        }
     }else{
         compScore++;
-        //console.log("You Lose");
         compScorePara.innerText=compScore;
-        // msg.innerText = "You Lose";
         msg.innerText = `You Lose. ${compChoice} beats your ${userChoice}`;
-        msg.style.backgroundColor="red";
+        msg.classList.add("msg-lose");
+        
+        // Tactile Shake Feedback
+        msg.classList.add("shake-anim");
+        setTimeout(() => {
+            msg.classList.remove("shake-anim");
+        }, 500);
     }
     // Show restart button smoothly (no layout shift)
     resetContainer.style.opacity = "1";
@@ -51,25 +64,20 @@ const showWinner = (userWin,userChoice,compChoice) =>{
 };
 
 const playGame = (userChoice) => {
-    //console.log("User Choice = ",userChoice); 
     const compChoice = genComputerChoice();
-    //console.log("Computer Choice = ",compChoice);
 
     if(userChoice === compChoice){
         drawGame(); // Draw Game 
     } else{
         let userWin = true;
         if(userChoice ==="rock"){
-            //scissors , paper
             userWin = compChoice==="paper"? false : true;
         }else if(userChoice === "paper"){
-            //  scissor , rock;
         userWin = compChoice==="scissor" ? false : true;
-        } else {// userChoice will be scissor
-             // rock , paper
+        } else {
             userWin = compChoice==="rock" ? false : true;
         }
-        showWinner(userWin,userChoice,compChoice); //
+        showWinner(userWin,userChoice,compChoice);
     }
 };
 
@@ -86,7 +94,7 @@ function resetGame() {
     userScorePara.innerText = 0;
     compScorePara.innerText = 0;
     msg.innerText = "Play Your Move";
-    msg.style.backgroundColor = "rgb(20, 20, 57)";
+    msg.className = ""; // clear all outcome classes
     // Hide restart button smoothly (no layout shift)
     resetContainer.style.opacity = "0";
     resetContainer.style.pointerEvents = "none";
