@@ -9,14 +9,15 @@ A fun and interactive **Rock, Paper, Scissors** game built with pure **HTML**, *
 
 ## ✨ Features
 
-- 🤖 **Play Against the Computer** — The computer makes a random choice every round, keeping every game unpredictable
-- 📊 **Live Score Tracking** — Scores for both You and the Computer update in real time after every round
-- 💬 **Dynamic Result Messages** — Clear win/lose/draw feedback with color-coded banners (green, red, navy)
-- 🔄 **Restart Button** — Resets both scores and the message back to the start; only appears after the first point is scored
-- 📖 **How to Play Popup** — A collapsible rules card in the top-left corner explaining game rules at a glance
-- 🚫 **No Text Selection** — Clean, app-like feel with text selection disabled across the entire page
-- 📐 **Single-Screen Layout** — The entire game fits within the viewport — no scrolling needed
-- 🎨 **Dark Navy Theme** — Consistent color palette with a dark navy header, bisque text, and styled rounded buttons
+- 🤖 **Play Against the Computer** — Random computer move generation to keep gameplay unpredictable.
+- 🎨 **Premium Dark Gradient Theme** — Modern, high-end radial background gradient using deep indigo and navy-black tones.
+- 🧊 **Glassmorphism UI** — Scoreboard cards and message container designed with semi-transparent backdrops, subtle borders, and backdrop-filter blur effects.
+- 🚀 **Tactile Micro-Animations** — Spring-based hover scales, custom image rotations, and active click state animations on selection circles.
+- 💥 **Confetti & Shake Feedback** — High-fidelity outcome animations including colorful confetti bursts on wins and horizontal shake animations on losses.
+- 📊 **Glowing Score Cards** — Individual equal-sized scorecards with a gold glow for the player and a coral glow for the computer.
+- 📱 **Fully Mobile Responsive** — Dynamically scales down to `320px` width using viewport width (`vw`) units, flexible margins, and fluid typography.
+- 🔄 **Smooth Restart Button** — Fades in once a point is scored and lets you reset the game instantly.
+- 📖 **How to Play Popup** — Accessible collapsable widget in the top-left corner explaining the rules.
 
 ---
 
